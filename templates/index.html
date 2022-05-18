@@ -1,0 +1,11 @@
+    {% extends "base.html"%} {% block content %}
+<h1>Flask Blog</h1>
+<p><a href="/create" role="button">SIGN UP</a></p>
+<article>
+    <h2>HOME</h2>
+    <p>HERE IS HOME</p>
+</article>
+
+<a href="{{url_for('article1')}}">TO KIJI1</a>
+<a href="{{url_for('article2')}}">TO KIJI2</a>
+    {% endblock %}

@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>
-    SIGN UP</h1>
+<h1>Sign up</h1>
     <form method="POST">
-        <label for="title">TITLE</label>
+        <label for="title">Title</label>
         <input type="text" name="title">
-        <label for="body">CONTENTS</label>
+        <label for="body">Contents</label>
         <input type="text" name="body">
         <input type="submit" value="SIGN UP">
     </form>
 
-    <a href="{{url_for('index')}}">BACK</a>
+    <a href="{{url_for('index')}}">Go back to the home</a>
     {% endblock %}

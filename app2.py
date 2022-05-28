@@ -21,7 +21,7 @@ class Post(db.Model):
 @app.route("/",methods=["GET"])  
 def index():
     posts = Post.query.all()   
-    return render_template("index.html",posts=posts)
+    return render_template("index2.html",posts=posts)
 
 @app.route("/article1")
 def article1():
@@ -55,6 +55,11 @@ def update(id):
         post.body = request.form.get("body")
         db.session.commit()
         return redirect("/")
+
+@app.route("/<int:id>/addition",methods=["GET","POST"])   
+def addition(id):
+    post=Post.query.get(id)
+    return render_template("addition.html",post=post)
 
 @app.route("/<int:id>/delete",methods=["GET"])
 def delete(id):

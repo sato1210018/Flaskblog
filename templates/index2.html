@@ -5,15 +5,7 @@
     <h2>Home screen</h2>
     <p>This is the home screen</p>
     {% for post in posts %}
-    <h2>{{post.title}}</h2>
-    <ul>
-        <li>Date and time of creation:{{post.created_at}}</li>
-    </ul>
-    <ul>
-        <li>{{post.body}}</li>
-    </ul>
-    <a href="/{{post.id}}/update" role="button">Edit</a>
-    <a href="/{{post.id}}/delete" role="button">Delete</a>
+    <a href="/{{post.id}}/addition">To the article</a>
     {% endfor %}
 </article>
 <a href="{{url_for('article1')}}">To article1</a>
